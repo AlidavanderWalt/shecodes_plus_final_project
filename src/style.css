@@ -33,9 +33,14 @@ p.coder {
   text-align: center;
 }
 
+#weather-description {
+  text-align: left !important;
+  text-transform: capitalize;
+}
+
 p.weather-info {
-  text-align: right !important; 
   float: right;
+  text-align: right !important; 
 }
 
 .outer {
@@ -72,7 +77,7 @@ p.weather-info {
   width: 665px;
 }
 
-i.em {
+i.em, #weather-icon {
   display: block;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -87,12 +92,11 @@ i#country-flag {
   margin-top: 0 !important;
 }
 
-i#weather-icon {
+#weather-icon {
   display: inline !important;
   float: right;
-  padding: 40px !important;
-  margin-bottom: 15px !important;
-  margin-top: 10px !important;
+  margin: 0;
+  padding: 0;
 }
 
 span#precipitation {

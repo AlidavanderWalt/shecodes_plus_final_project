@@ -22,16 +22,21 @@ function showSearchValues(response) {
     fahrenheitValue.addEventListener("click", celciusToFahrenheit);
   
     document.querySelector("#city-name").innerHTML = `${response.data.name}`;
+    document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    document.querySelector("#weather-icon").setAttribute("alt", response.data.weather[0].description);
     document.querySelector("#temperature-value").innerHTML = Math.round(
       response.data.main.temp
     );
+    document.querySelector(
+        "#weather-description"
+      ).innerHTML = `<em>${response.data.weather[0].description}</em.`
     document.getElementById("country-flag").className += `em em-flag-${country}`;
     document.querySelector(
       "#humidity"
     ).innerHTML = `Humidity ${response.data.main.humidity}%`;
     document.querySelector(
       "#precipitation"
-    ).innerHTML = `<em><strong>Precipitation</strong></em>`;
+    ).innerHTML = `<em><strong>Precipitation under construction</strong></em>`;
     document.querySelector("#wind-speed").innerHTML = `Wind ${Math.round(
       response.data.wind.speed * 3.6
     )}km/h`;
@@ -122,5 +127,5 @@ function showSearchValues(response) {
   }
   
   let currentDateTime = document.querySelector("#date-time");
-  currentDateTime.innerHTML = `${formatDate(now)} <br/> ${formatTime(now)}`;
+  currentDateTime.innerHTML = `${formatDate(now)} <br/> Last updated: ${formatTime(now)}`;
   
