@@ -1,0 +1,70 @@
+h1,
+h3,
+h5 {
+  color: #28527a;
+  text-align: center;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+p,
+i#weather-icon {
+  color: #343054;
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+
+p.coder {
+  text-align: left;
+}
+
+p.weather-info {
+  margin-bottom: 0 !important;
+}
+
+.outer {
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  margin: 50px 0 0 0;
+  width: 700px;
+}
+
+.search-form {
+  display: block;
+  font-family: "Merriweather Sans", sans-serif;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+.search-btn,
+.current-location-btn {
+  box-shadow: #c7cfb7 0 4px 4px 0;
+  cursor: pointer;
+  display: block;
+  font-family: "Merriweather Sans", sans-serif;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+.current-location-btn {
+  margin-top: 10px;
+}
+
+.inner {
+  margin: 10px 0;
+  width: 665px;
+}
+
+i.em {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 30px;
+}
+
+i#weather-icon,
+p#min-max,
+span#precipitation {
+  color: red;
+  font-size: smaller;
+}
