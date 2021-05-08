@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <title>Week 5 Homework - SheCodes+</title>
+
+  <link href="src/styles.css"
+    rel="stylesheet"
+  >
+
+  <link crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+    rel="stylesheet">
+
+  <link href="https://emoji-css.afeld.me/emoji.css" 
+  rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather+Sans:wght@500&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <div class="container"> 
+    <div class="card outer">
+      <div class="card-body">
+        <h1>
+          CATCHY APP NAME T.B.C.
+        </h1>
+        <form id="city-search">
+        <input autocomplete="off"
+          autofocus="on"
+          class="search-form"
+          id="city-input"
+          placeholder="Enter a city 📍"
+          type="text"
+        />
+        <input class="search-btn"
+          type="submit" 
+					value="Search" 
+					id="search-btn"
+        />
+        <input class="current-location-btn"
+          type="submit" 
+					value="Current location"
+					id="current-location-btn" 
+        />
+        </form>
+        <div class="card inner">
+          <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-3">
+                  <i aria-label="Country Flag"
+                  aria-role="presentation"
+									id="country-flag">
+                  </i>
+                </div>
+                <div class="col-6">
+                  <h3>
+                  </h3>
+                  <p class="date-time" id="date-time">
+                  </p>
+                </div>
+                <div class="col-3">
+                  <i id="weather-icon">
+                    <em> <strong> Weather icon </br> under construction </strong> </em>
+                  </i>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-3">
+                  <h5>
+                    Min/Max
+                  </h5>
+									<p class="weather-info"
+									id="min-max">
+                  </p>
+                </div>
+                <div class="col-6">
+                  <h5>
+                    Currently
+                  </h5>
+                  <p class="weather-info">
+                    <span id="temperature-value">  </span><a href="#" id="celcius-link">°C</a>|<a href="#" id="fahrenheit-link">°F</a>
+                    </br>
+                    <small id="weather-description">
+                    </small>
+                  </p>
+                </div>
+                <div class="col-3">
+                  <h5>
+                    Conditions 
+                  </h5>
+                    <p class="weather-info">
+											<span id="humidity"></span>
+                    </br>
+											<span id="precipitation"></span>
+                    </br>
+											<span id="wind-speed"></span>
+                  	</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card inner">
+          <div class="card-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5>
+                    Mon
+                  </h5>
+                  <i aria-label="BLACK SUN WITH RAYS"
+                  aria-role="presentation"
+                  class="em em-sunny">
+                  </i>
+                  <p class="weather-info">
+                    16°C/31°C
+                  </p>
+                </div>
+                <div class="col">
+                  <h5>
+                    Tue
+                  </h5>
+                  <i aria-role="presentation"
+                  class="em em-thunder_cloud_and_rain">
+                  </i>
+                  <p class="weather-info">
+                    17°C/29°C
+                  </p>
+                </div>
+                <div class="col">
+                  <h5>
+                    Wed
+                  </h5>
+                  <i aria-role="presentation"
+                  class="em em-rain_cloud">
+                  </i>
+                  <p class="weather-info">
+                    17°C/27°C
+                  </p>
+                </div>
+                <div class="col">
+                  <h5>
+                    Thu
+                  </h5>
+                  <i aria-role="presentation" 
+                  class="em em-rain_cloud">
+                  </i>
+                  <p class="weather-info">
+                    16°C/27°C
+                  </p>
+                </div>
+                <div class="col">
+                  <h5>
+                    Fri
+                  </h5>
+                  <i aria-role="presentation" 
+                  class="em em-rain_cloud">
+                  </i>
+                  <p class="weather-info">
+                    16°C/27°C
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="coder">
+      <a href="https://github.com/AlidavanderWalt/shecodes_plus_final_project" target="_blank">Open-source</a> coding by Alida van der Walt
+    </p>
+  </div>
+</body>
+<script src="src/index.js"></script>
+</html>
