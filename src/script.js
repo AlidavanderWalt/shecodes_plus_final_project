@@ -1,4 +1,3 @@
-// NEW CODE (WEEK 5)
 function showSearchValues(response) {
     let celciusValue = document.querySelector("#celcius-link");
     let fahrenheitValue = document.querySelector("#fahrenheit-link");
@@ -22,23 +21,17 @@ function showSearchValues(response) {
   
     fahrenheitValue.addEventListener("click", celciusToFahrenheit);
   
-    document.querySelector("h3").innerHTML = `${response.data.name}`;
+    document.querySelector("#city-name").innerHTML = `${response.data.name}`;
     document.querySelector("#temperature-value").innerHTML = Math.round(
       response.data.main.temp
     );
-    document.querySelector(
-      "#weather-description"
-    ).innerHTML = `${response.data.weather[0].description}`.toLowerCase();
     document.getElementById("country-flag").className += `em em-flag-${country}`;
-    document.querySelector(
-      "#min-max"
-    ).innerHTML = `<em><strong>Min/Max value </br> under construction</strong></em>`;
     document.querySelector(
       "#humidity"
     ).innerHTML = `Humidity ${response.data.main.humidity}%`;
     document.querySelector(
       "#precipitation"
-    ).innerHTML = `<em><strong>Precipitation value </br> under construction</strong></em>`;
+    ).innerHTML = `<em><strong>Precipitation</strong></em>`;
     document.querySelector("#wind-speed").innerHTML = `Wind ${Math.round(
       response.data.wind.speed * 3.6
     )}km/h`;

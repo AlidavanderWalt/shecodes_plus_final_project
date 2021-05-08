@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <title>Week 5 Homework - SheCodes+</title>
-
-  <link href="src/style.css"
-    rel="stylesheet"
-  >
+  <title>What's my weather?</title>
 
   <link crossorigin="anonymous"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
     rel="stylesheet">
+
+    <link href="src/style.css"
+    rel="stylesheet"
+  >
 
   <link href="https://emoji-css.afeld.me/emoji.css" 
   rel="stylesheet">
@@ -28,7 +28,7 @@
     <div class="card outer">
       <div class="card-body">
         <h1>
-          CATCHY APP NAME T.B.C.
+          What's my weather? 
         </h1>
         <form id="city-search">
         <input autocomplete="off"
@@ -43,72 +43,54 @@
 					value="Search" 
 					id="search-btn"
         />
-        <input class="current-location-btn"
-          type="submit" 
-					value="Current location"
-					id="current-location-btn" 
-        />
         </form>
+
         <div class="card inner">
           <div class="card-body">
             <div class="container">
               <div class="row">
-                <div class="col-3">
+                <div class="col-6">
                   <i aria-label="Country Flag"
                   aria-role="presentation"
 									id="country-flag">
                   </i>
                 </div>
                 <div class="col-6">
-                  <h3>
-                  </h3>
-                  <p class="date-time" id="date-time">
-                  </p>
-                </div>
-                <div class="col-3">
-                  <i id="weather-icon">
-                    <em> <strong> Weather icon </br> under construction </strong> </em>
+                  <i aria-label="BLACK SUN WITH RAYS"
+                  aria-role="presentation"
+                  class="em em-sunny"
+                  id="weather-icon">
                   </i>
                 </div>
               </div>
             </div>
             <div class="container">
               <div class="row">
-                <div class="col-3">
-                  <h5>
-                    Min/Max
-                  </h5>
-									<p class="weather-info"
-									id="min-max">
+                <div class="col-6">
+                  <h3 id="city-name">
+                  </h3>
+                  <p class="date-time" id="date-time">
                   </p>
                 </div>
                 <div class="col-6">
-                  <h5>
-                    Currently
-                  </h5>
+                  <h3 class="weather-info">
+                    <span id="temperature-value">  </span>  <a href="#" id="celcius-link">°C</a>| <a href="#" id="fahrenheit-link">°F</a> 
+                  </h3>
                   <p class="weather-info">
-                    <span id="temperature-value">  </span><a href="#" id="celcius-link">°C</a>|<a href="#" id="fahrenheit-link">°F</a>
-                    </br>
-                    <small id="weather-description">
-                    </small>
+                    <span id="humidity"></span>
+                  </br>
+                    <span id="precipitation"></span>
+                  </br>
+                    <span id="wind-speed"></span>
                   </p>
                 </div>
-                <div class="col-3">
-                  <h5>
-                    Conditions 
-                  </h5>
-                    <p class="weather-info">
-											<span id="humidity"></span>
-                    </br>
-											<span id="precipitation"></span>
-                    </br>
-											<span id="wind-speed"></span>
-                  	</p>
-                </div>
+
               </div>
             </div>
+
           </div>
         </div>
+
         <div class="card inner">
           <div class="card-body">
             <div class="container">
@@ -121,7 +103,7 @@
                   aria-role="presentation"
                   class="em em-sunny">
                   </i>
-                  <p class="weather-info">
+                  <p>
                     16°C/31°C
                   </p>
                 </div>
@@ -132,7 +114,7 @@
                   <i aria-role="presentation"
                   class="em em-thunder_cloud_and_rain">
                   </i>
-                  <p class="weather-info">
+                  <p>
                     17°C/29°C
                   </p>
                 </div>
@@ -143,7 +125,7 @@
                   <i aria-role="presentation"
                   class="em em-rain_cloud">
                   </i>
-                  <p class="weather-info">
+                  <p>
                     17°C/27°C
                   </p>
                 </div>
@@ -154,7 +136,7 @@
                   <i aria-role="presentation" 
                   class="em em-rain_cloud">
                   </i>
-                  <p class="weather-info">
+                  <p>
                     16°C/27°C
                   </p>
                 </div>
@@ -165,7 +147,7 @@
                   <i aria-role="presentation" 
                   class="em em-rain_cloud">
                   </i>
-                  <p class="weather-info">
+                  <p>
                     16°C/27°C
                   </p>
                 </div>
@@ -173,6 +155,13 @@
             </div>
           </div>
         </div>
+
+        <input class="current-location-btn"
+          type="submit" 
+					value="Current location weather"
+					id="current-location-btn" 
+        />
+        
       </div>
     </div>
     <p class="coder">

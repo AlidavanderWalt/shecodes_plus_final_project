@@ -6,47 +6,65 @@ h5 {
   font-family: "Merriweather Sans", sans-serif;
 }
 
-p,
-i#weather-icon {
+h1 {
+  padding: 10px 0 10px 5px;
+}
+
+h3, h5 {
+  text-transform: uppercase;
+}
+
+h1, h3#city-name, p.date-time {
+  text-align: left !important;
+}
+
+h3.weather-info {
+  text-align: right;
+}
+
+p {
   color: #343054;
   font-family: "Inconsolata", monospace;
+  margin: 0;
   text-align: center;
 }
 
 p.coder {
-  text-align: left;
+  text-align: center;
 }
 
 p.weather-info {
-  margin-bottom: 0 !important;
+  text-align: right !important; 
+  float: right;
 }
 
 .outer {
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-  margin: 50px 0 0 0;
+  margin: 0 auto;
+  margin-top: 50px;
   width: 700px;
 }
 
 .search-form {
-  display: block;
   font-family: "Merriweather Sans", sans-serif;
   margin: 0 auto;
   margin-bottom: 10px;
-  padding: 2px;
+  padding: 4px;
 }
 
 .search-btn,
 .current-location-btn {
   box-shadow: #c7cfb7 0 4px 4px 0;
+  color: #28527a;
   cursor: pointer;
-  display: block;
   font-family: "Merriweather Sans", sans-serif;
   margin: 0 auto;
-  padding: 2px;
+  padding: 4px;
 }
 
 .current-location-btn {
-  margin-top: 10px;
+  display: block;
+  margin-top: 15px;
 }
 
 .inner {
@@ -62,8 +80,21 @@ i.em {
   padding: 30px;
 }
 
-i#weather-icon,
-p#min-max,
+i#country-flag {
+  display: inline-block !important;
+  padding: 50px !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+i#weather-icon {
+  display: inline !important;
+  float: right;
+  padding: 40px !important;
+  margin-bottom: 15px !important;
+  margin-top: 10px !important;
+}
+
 span#precipitation {
   color: red;
   font-size: smaller;
