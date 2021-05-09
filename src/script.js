@@ -21,25 +21,15 @@ function showSearchValues(response) {
   
     fahrenheitValue.addEventListener("click", celciusToFahrenheit);
   
+    document.getElementById("country-flag").className += `em em-flag-${country}`;
     document.querySelector("#city-name").innerHTML = `${response.data.name}`;
+    document.querySelector("#weather-description").innerHTML = `<em>${response.data.weather[0].description}</em.`;
     document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     document.querySelector("#weather-icon").setAttribute("alt", response.data.weather[0].description);
-    document.querySelector("#temperature-value").innerHTML = Math.round(
-      response.data.main.temp
-    );
-    document.querySelector(
-        "#weather-description"
-      ).innerHTML = `<em>${response.data.weather[0].description}</em.`
-    document.getElementById("country-flag").className += `em em-flag-${country}`;
-    document.querySelector(
-      "#humidity"
-    ).innerHTML = `Humidity ${response.data.main.humidity}%`;
-    document.querySelector(
-      "#precipitation"
-    ).innerHTML = `<em><strong>Precipitation under construction</strong></em>`;
-    document.querySelector("#wind-speed").innerHTML = `Wind ${Math.round(
-      response.data.wind.speed * 3.6
-    )}km/h`;
+    document.querySelector("#temperature-value").innerHTML = Math.round(response.data.main.temp);
+    document.querySelector("#humidity").innerHTML = `Humidity ${response.data.main.humidity}%`;
+    document.querySelector("#precipitation").innerHTML = `<em><strong>Precipitation under construction</strong></em>`;
+    document.querySelector("#wind-speed").innerHTML = `Wind ${Math.round(response.data.wind.speed * 3.6)}km/h`;
   }
   
   function searchCity(city) {
@@ -74,8 +64,6 @@ function showSearchValues(response) {
   currentLocationButton.addEventListener("click", getCurrentPosition);
   
   searchCity("Windhoek");
-  
-  // OLD CODE (WEEK 4)
   
   let now = new Date();
   
