@@ -78,8 +78,10 @@ p {
 #weather-icon {
   display: inline !important;
   float: right;
-  margin: 0;
+  height: 150px;
+  margin: -30px -35px -25px -25px;
   padding: 0;
+  width: 150px;
 }
 
 .weather-info {
