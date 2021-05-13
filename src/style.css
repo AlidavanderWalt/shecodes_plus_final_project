@@ -22,6 +22,10 @@ h3, h5 {
   text-transform: uppercase;
 }
 
+h5 {
+   margin: 0;
+}
+
 p {
   color: #343054;
   font-family: "Inconsolata", monospace;
@@ -71,7 +75,6 @@ p {
 }
 
 #weather-description {
-  text-align: left !important;
   text-transform: capitalize;
 }
 
@@ -98,12 +101,14 @@ p {
   padding: 0;
 }
 
-i.em {
+#weather-forecast-icon {
   display: block;
   margin: 0 auto;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  padding: 30px;
+  width: 80px;
+}
+
+#weather-forecast-min-temp {
+  opacity: 0.6;
 }
 
 .coder {

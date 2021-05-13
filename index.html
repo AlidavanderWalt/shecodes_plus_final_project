@@ -69,14 +69,14 @@
                   </h3>
                   <p class="date-time" id="date-time">
                   </p>
-                  <p id="weather-description">
-                  </p>
                 </div>
                 <div class="col-6">
                   <h3 class="weather-info">
                     <span id="temperature-value">  </span>  <a href="#" id="celcius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a> 
                   </h3>
                   <p class="weather-info">
+                    <span id="weather-description"></span>
+                  </br>
                     <span id="humidity"></span>
                   </br>
                     <span id="precipitation"></span>
@@ -92,73 +92,27 @@
           <div class="card-body">
             <div class="container">
               <div class="row">
-                <div class="col">
+                <div class="col-2">
                   <h5>
                     Mon
                   </h5>
-                  <i aria-label="BLACK SUN WITH RAYS"
-                  aria-role="presentation"
-                  class="em em-sunny">
-                  </i>
+                  <img 
+                  alt=""
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  id="weather-forecast-icon">
                   <p>
-                    16°C/31°C
-                  </p>
-                </div>
-                <div class="col">
-                  <h5>
-                    Tue
-                  </h5>
-                  <i aria-role="presentation"
-                  class="em em-thunder_cloud_and_rain">
-                  </i>
-                  <p>
-                    17°C/29°C
-                  </p>
-                </div>
-                <div class="col">
-                  <h5>
-                    Wed
-                  </h5>
-                  <i aria-role="presentation"
-                  class="em em-rain_cloud">
-                  </i>
-                  <p>
-                    17°C/27°C
-                  </p>
-                </div>
-                <div class="col">
-                  <h5>
-                    Thu
-                  </h5>
-                  <i aria-role="presentation" 
-                  class="em em-rain_cloud">
-                  </i>
-                  <p>
-                    16°C/27°C
-                  </p>
-                </div>
-                <div class="col">
-                  <h5>
-                    Fri
-                  </h5>
-                  <i aria-role="presentation" 
-                  class="em em-rain_cloud">
-                  </i>
-                  <p>
-                    16°C/27°C
+                    <span id="weather-forecast-max-temp">31°</span> 
+                    <span id="weather-forecast-min-temp">16°C</span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <input class="current-location-btn"
           type="submit" 
 					value="Current location weather"
-					id="current-location-btn" 
-        />
-        
+					id="current-location-btn"/> 
       </div>
     </div>
     <p class="coder">

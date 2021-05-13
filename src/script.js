@@ -23,7 +23,7 @@ function showSearchValues(response) {
   
     document.getElementById("country-flag").className += `em em-flag-${country}`;
     document.querySelector("#city-name").innerHTML = `${response.data.name}`;
-    document.querySelector("#weather-description").innerHTML = `<em>${response.data.weather[0].description}</em.`;
+    document.querySelector("#weather-description").innerHTML = `${response.data.weather[0].description}`;
     document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     document.querySelector("#weather-icon").setAttribute("alt", response.data.weather[0].description);
     document.querySelector("#temperature-value").innerHTML = Math.round(response.data.main.temp);
@@ -115,5 +115,5 @@ function showSearchValues(response) {
   }
   
   let currentDateTime = document.querySelector("#date-time");
-  currentDateTime.innerHTML = `${formatDate(now)} <br/> Last updated: ${formatTime(now)}`;
+  currentDateTime.innerHTML = `Last updated: </br> ${formatDate(now)} </br> ${formatTime(now)}`;
   
