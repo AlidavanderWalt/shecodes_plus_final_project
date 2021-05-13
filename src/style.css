@@ -1,4 +1,18 @@
-h1,
+h1 {
+  color: #28527a;
+  font-family: "Inconsolata", monospace;
+  padding: 10px 0 10px 5px;
+  text-align: left;
+}
+
+.function {
+  color: #ee6fa2;
+}
+
+.weather {
+  color: #44b865;
+}
+
 h3,
 h5 {
   color: #28527a;
@@ -6,11 +20,8 @@ h5 {
   font-family: "Merriweather Sans", sans-serif;
 }
 
-h1 {
-  padding: 10px 0 10px 5px;
-}
 
-h1, h3#city-name, p.date-time {
+h3#city-name, p.date-time {
   text-align: left !important;
 }
 
@@ -87,14 +98,9 @@ p {
   width: 150px;
 }
 
-.weather-info {
+p.weather-info {
   float: right;
   text-align: right !important; 
-}
-
-#precipitation {
-  color: red;
-  font-size: smaller;
 }
 
 .col {

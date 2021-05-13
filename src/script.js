@@ -6,27 +6,7 @@ function getForecast(coordinates) {
 }
 
 function showSearchValues(response) {
-  let celciusValue = document.querySelector("#celcius-link");
-  let fahrenheitValue = document.querySelector("#fahrenheit-link");
   let country = response.data.sys.country.toLowerCase();
-
-  function fahrenheitToCelcius(event) {
-    event.preventDefault();
-    let convertedTemperature = document.querySelector("#temperature-value");
-    convertedTemperature.innerHTML = Math.round(response.data.main.temp);
-  }
-
-  celciusValue.addEventListener("click", fahrenheitToCelcius);
-
-  function celciusToFahrenheit(event) {
-    event.preventDefault();
-    let convertedTemperature = document.querySelector("#temperature-value");
-    convertedTemperature.innerHTML = Math.round(
-      (response.data.main.temp * 9) / 5 + 32
-    );
-  }
-
-  fahrenheitValue.addEventListener("click", celciusToFahrenheit);
 
   document.getElementById("country-flag").className += `em em-flag-${country}`;
   document.querySelector("#city-name").innerHTML = `${response.data.name}`;
@@ -35,7 +15,6 @@ function showSearchValues(response) {
   document.querySelector("#weather-icon").setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#temperature-value").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#humidity").innerHTML = `Humidity ${response.data.main.humidity}%`;
-  document.querySelector("#precipitation").innerHTML = `<em><strong>Precipitation under construction</strong></em>`;
   document.querySelector("#wind-speed").innerHTML = `Wind ${Math.round(response.data.wind.speed * 3.6)}km/h`;
 
   getForecast(response.data.coord);
