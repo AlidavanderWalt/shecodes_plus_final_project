@@ -117,3 +117,33 @@ function showSearchValues(response) {
   let currentDateTime = document.querySelector("#date-time");
   currentDateTime.innerHTML = `Last updated: </br> ${formatDate(now)} </br> ${formatTime(now)}`;
   
+  function displayForecast() {
+    let forecast = document.querySelector("#weather-forecast");
+    let forecastHTML = `<div class="row">`
+    let days = ["Thu", "Fri", "Sat", "Sun"];
+    days.forEach(function(day) {
+      forecastHTML = forecastHTML +
+      `<div class="col-2">
+        <h5>
+          ${day}
+        </h5>
+        <img 
+          alt=""
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          id="weather-forecast-icon">
+        <p>
+          <span id="weather-forecast-max-temp">31°</span> 
+          <span id="weather-forecast-min-temp">16°C</span>
+          </p>
+        </div>`;
+    }
+  )
+    
+    
+
+    forecastHTML = forecastHTML + `</div>`;
+
+    forecast.innerHTML = forecastHTML;
+      }
+
+      displayForecast();
